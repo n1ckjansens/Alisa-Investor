@@ -17,7 +17,7 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return the same params from request', () => {
+    it('should take correct request params and return correct response', () => {
       expect(appController.getAlisaRequest(alisaRequest)).toBe(alisaResponse);
     });
   });
