@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { alisaRequest } from './boilerplate/alisaRequest.boilerplate';
+import { alisaResponse } from './boilerplate/alisaResponse.boilerplate';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -15,8 +17,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return the same params from request', () => {
+      expect(appController.getAlisaRequest(alisaRequest)).toBe(alisaResponse);
     });
   });
 });
