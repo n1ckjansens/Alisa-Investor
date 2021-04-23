@@ -35,7 +35,7 @@ interface IEvent {
   /** JSON-объект для многоуровневых событий. Допустимо не более пяти уровней вложенности события.
    * Многоуровневые события передаются через пары key:value.
    */
-  value: unknown;
+  value?: unknown;
 }
 
 interface IAnalytics {
