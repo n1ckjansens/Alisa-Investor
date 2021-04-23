@@ -30,6 +30,8 @@ jobs:
     - name: Project Build
       run: npm run build
     - name: Tests run
-      run: npm test
+      run: npm run test
+    - name: E2E Tests run
+      run: npm run test:e2e
     - name: ESLint Checking
       run: npm run lint
