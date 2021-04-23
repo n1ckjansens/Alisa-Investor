@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Bootstraping packages
+    - name: Bootstrapping packages
       run: npm ci
     - name: Project Build
       run: npm run build
