@@ -98,7 +98,7 @@ interface ISession {
   new: boolean;
 }
 
-export interface AlisaRequest {
+export interface IAlisaRequest {
   /** Информация об устройстве, с помощью которого пользователь разговаривает с Алисой. */
   meta: IMeta;
   /** Данные, полученные от пользователя. */

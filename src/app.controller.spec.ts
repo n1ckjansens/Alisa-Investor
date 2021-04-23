@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { IAlisaRequest } from './models/alisaRequest.model';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -15,8 +16,12 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    // TODO: Выпилить замену типов после формирования валидного ответа
+    it('should return the same params from request', () => {
+      const params = { message: 'HELLO' };
+      expect(
+        appController.getAlisaRequest((params as unknown) as IAlisaRequest),
+      ).toBe(params);
     });
   });
 });
