@@ -15,7 +15,7 @@ export const alisaRequest: IAlisaRequest = {
     original_utterance: 'закажи пиццу на улицу льва толстого, 16 на завтра',
     type: 'SimpleUtterance',
     markup: {
-      dangerous_context: true,
+      dangerous_context: false,
     },
     payload: {},
     nlu: {
